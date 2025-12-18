@@ -30,9 +30,9 @@ def caesar(text, sh, meth):
                     l = alphabet[index - sh]
 
             if is_uppercase:
-                result += l.upper()
-            else:
-                result += l
+                l = l.upper()
+                        
+            result += l
 
     return result
 
@@ -49,4 +49,5 @@ if __name__ == "__main__":
         print("Invalid shift.")
     else:
         output = caesar(plaintext, shift, method)
+
         print(output)
